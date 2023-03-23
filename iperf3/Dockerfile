@@ -11,9 +11,8 @@ LABEL io.hass.arch="amd64"
 ENV LANG C.UTF-8
 
 ## Install iperf3
-RUN apk add --no-cache iperf3 jq && \
-    addgroup iperf && \
-    adduser -DH iperf iperf
+RUN apk add --no-cache iperf3 jq
+RUN adduser -DH iperf iperf
 
 # Copy the run script
 COPY run.sh /
