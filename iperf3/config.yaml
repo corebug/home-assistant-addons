@@ -1,5 +1,5 @@
 name: "iperf3"
-version: "3.12"
+version: "3.12.0"
 slug: iperf3
 description: >-
   iperf3: a TCP, UDP, and SCTP network bandwidth measurement tool
@@ -12,8 +12,8 @@ arch:
 url: "https://github.com/corebug/home-assistant-addons/tree/main/iperf3"
 startup: system
 boot: auto
-host_network: true
-host_pid: true
+# host_network: true
+# host_pid: true
 # homeassistant: 2023.3.6
 backup: cold
 stage: stable
