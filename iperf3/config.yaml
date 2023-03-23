@@ -14,7 +14,7 @@ startup: system
 boot: auto
 host_network: true
 host_pid: true
-homeassistant: 2023.3.6
+# homeassistant: 2023.3.6
 backup: cold
 stage: stable
 ports:
