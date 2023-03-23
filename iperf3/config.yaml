@@ -9,7 +9,7 @@ arch:
   - aarch64
   - amd64
   - i386
-url: "TBD"
+url: "https://github.com/corebug/home-assistant-addons/tree/main/iperf3"
 startup: system
 boot: auto
 host_network: true
