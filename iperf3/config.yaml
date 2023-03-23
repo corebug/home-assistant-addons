@@ -2,7 +2,7 @@ name: "iperf3"
 version: "3.12"
 slug: iperf3
 description: >-
-  "iperf3: a TCP, UDP, and SCTP network bandwidth measurement tool"
+  iperf3: a TCP, UDP, and SCTP network bandwidth measurement tool
 arch:
   - armhf
   - armv7
