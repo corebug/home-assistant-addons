@@ -1,0 +1,5 @@
+# JetBrains IDEs
+.idea
+
+# Option definitions
+*/options*.json

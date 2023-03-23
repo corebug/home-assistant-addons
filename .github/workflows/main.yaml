@@ -1,0 +1,53 @@
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron:  '20 3 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        addon:
+          - iperf3
+        arch:
+          - aarch64
+          - amd64
+          - armhf
+          - i386
+        exclude:
+          - addon: keepalived
+            arch: i386
+          - addon: keepalived
+            arch: armhf
+          - addon: picamera
+            arch: amd64
+          - addon: picamera
+            arch: i386
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Docker login
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_TOKEN}}
+
+      - name: install required tooling
+        run: |
+          sudo /bin/sh -c 'wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64'
+          sudo chmod +x /usr/local/bin/yq
+
+      - name: Build ${{ matrix.addon }} - ${{ matrix.arch }}
+        run: |
+          ./build.sh ${{ matrix.addon }} ${{ matrix.arch }}

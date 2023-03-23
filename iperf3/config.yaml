@@ -1,0 +1,26 @@
+name: "iperf3"
+version: "3.12"
+slug: iperf3
+description: >-
+  "iperf3: a TCP, UDP, and SCTP network bandwidth measurement tool"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+url: "TBD"
+startup: system
+boot: auto
+host_network: true
+host_pid: true
+homeassistant: 2023.3.6
+backup: cold
+stage: stable
+ports:
+  5201/tcp: 5201
+  5201/udp: 5201
+ports_description:
+  5201/tcp: TCP port used for measurements
+  5201/udp: UDP port used for measurements
+image: corebug/home-assistant-addon-{arch}-iperf3
