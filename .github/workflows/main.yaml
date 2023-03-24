@@ -22,15 +22,7 @@ jobs:
           - amd64
           - armhf
           - i386
-        exclude:
-          - addon: keepalived
-            arch: i386
-          - addon: keepalived
-            arch: armhf
-          - addon: picamera
-            arch: amd64
-          - addon: picamera
-            arch: i386
+          - armv7
     steps:
       - name: Checkout repo
         uses: actions/checkout@main
