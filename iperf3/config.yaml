@@ -1,5 +1,5 @@
 name: "iperf3"
-version: "3.12.0"
+version: "3.13-r1"
 slug: iperf3
 description: >-
   iperf3: a TCP, UDP, and SCTP network bandwidth measurement tool
