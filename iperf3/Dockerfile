@@ -4,7 +4,7 @@ ARG BUILD_ARCH
 ARG BUILD_VERSION
 
 LABEL maintainer "Vitalii Turovets <corebug@corebug.net"
-LABEL io.hass.version="3.16-r0"
+LABEL io.hass.version="3.17.1-r0"
 LABEL io.hass.type="addon"
 LABEL io.hass.arch="amd64"
 
