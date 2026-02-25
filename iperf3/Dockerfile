@@ -3,13 +3,13 @@ FROM alpine
 ARG BUILD_ARCH
 ARG BUILD_VERSION
 
-LABEL maintainer "Vitalii Turovets <corebug@corebug.net"
-LABEL io.hass.version="3.17.1-r0"
+LABEL maintainer="Vitalii Turovets <corebug@corebug.net"
+LABEL io.hass.version="3.19.1-r1"
 LABEL io.hass.type="addon"
 LABEL io.hass.arch="amd64"
 
-ENV LANG C.UTF-8
-ENV IPERF3_VERSION "3.17.1-r0"
+ENV LANG=C.UTF-8
+ENV IPERF3_VERSION="3.19.1-r1"
 
 ## Install iperf3
 RUN apk update
