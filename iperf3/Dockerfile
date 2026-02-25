@@ -4,6 +4,7 @@ ARG BUILD_ARCH
 ARG BUILD_VERSION
 
 LABEL maintainer="Vitalii Turovets <corebug@corebug.net"
+LABEL org.opencontainers.image.source=="https://github.com/corebug/home-assistant-addons"
 LABEL io.hass.version="3.19.1-r1"
 LABEL io.hass.type="addon"
 LABEL io.hass.arch="amd64"
