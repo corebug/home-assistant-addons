@@ -3,3 +3,9 @@
 
 # Option definitions
 */options*.json
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Qodana
+.qodana
