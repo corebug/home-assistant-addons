@@ -4,13 +4,13 @@ ARG BUILD_ARCH
 ARG BUILD_VERSION
 
 LABEL maintainer="Vitalii Turovets <corebug@corebug.net"
-LABEL org.opencontainers.image.source=="https://github.com/corebug/home-assistant-addons"
-LABEL io.hass.version="3.19.1-r1"
+LABEL org.opencontainers.image.source="https://github.com/corebug/home-assistant-addons"
+LABEL io.hass.version="3.20-r0"
 LABEL io.hass.type="addon"
 LABEL io.hass.arch="amd64"
 
 ENV LANG=C.UTF-8
-ENV IPERF3_VERSION="3.19.1-r1"
+ENV IPERF3_VERSION="3.20-r0"
 
 ## Install iperf3
 RUN apk update
